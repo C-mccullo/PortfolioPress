@@ -26,8 +26,8 @@ $light: #FFFFFF;
 */
 
 @import 'normalize';
-@import 'typography';
 @import 'global';
+@import 'typography';
 @import 'aboutSection';
 @import 'portfolioSection';
 @import 'contactSection';
@@ -43,7 +43,7 @@ header {
 	height: 500px;
 	filter: grayscale(90%);
 	.headerContainer {
-		padding-top: 80px;
+		padding-top: 40px;
 		text-align: center;
 	}
 }
@@ -74,7 +74,6 @@ header {
 .portfolio, .contact {
 	border-top: 1px solid $medium;
 	background-color: $light;
-	padding:80px;
 	position: relative;
 	h1 {
 		padding: 0 10px;
@@ -105,57 +104,405 @@ header {
 nav {
 	padding-top: 40px;
 	z-index: 90;
+	.navContainer {
+		text-align: center;
+	}
 	.menu {
 		margin: 0 auto;
-		width: 380px;
+		max-width: 380px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		li {
+			a {
+				color: $medium;
+				position: relative;
+				outline: none;
+				&:after {
+					position: absolute;
+					left: 50%;
+					top: 100%;
+					transform: translate(-50%);
+					content: '';
+					width: 0;
+					height: 1px;
+					background-color: $dark;
+					transition: 0.5s;
+				}
+				&:hover {
+					color: $dark;
+				}
+				&:hover::after {
+					width: 100%;
+				}
+			}
+		}		
 	}
 }
 
-// ***********************************
-//             Contact Section
-// ***********************************
-
-.contact {
-	background: url("images/San Fransisco Surf Daniel Ruswick test 1.jpg");
-	background-repeat: no-repeat;
+nav.mobileNav {
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 150;
+	i {
+		display: block;
+		padding: 20px;
+		font-size: 28px;
+		transition: 0.5s;
+	}
+}
+.mobileContainer {
+	display: none;
 	width: 100%;
-	background-size: 80%;
-	background-position: 0% 120%;
-	filter: grayscale(95%);
-	background-color: $light;
-	padding: 80px 0px 0px 0px;
-	.container {
+	margin: 0 auto;
+	position: fixed;
+	background-color: transparentize($medium, 0.05);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	.menu {
+		margin: 0 auto;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		.contactFormContainer {
-			width: 540px;
-			margin: 40px;
-		}
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		li {
+			padding: 20px 10px;
+			a {
+				color: $light;
+				position: relative;
+				outline: none;
+				font-size: 32px;
+				font-size: 3.2rem;
+				&:after {
+					position: absolute;
+					left: 50%;
+					top: 100%;
+					transform: translate(-50%);
+					content: '';
+					width: 0;
+					height: 1px;
+					background-color: $light;
+					transition: 0.5s;
+				}
+				&:focus {
+					color: $light;
+				}
+				&:focus::after {
+					width: 100%;
+				}
+			}
+		}		
 	}
 }
-.contactMeContainer {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	width: 700px;
-	text-align: center;
-	.contactMeItem {
-		flex-grow: 1;
-		h4, i {
-			margin: 0;
+.show {
+	display: block;
+}
+.activeHam {
+	color: $light;
+}
+
+
+// *******************************************
+//              Media Queries
+// *******************************************
+
+@media (max-width: 380px) {
+	h1 {
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+	h2 {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+	nav.mobileNav {
+		display: block;
+	}
+	header {
+		nav {
+			display: none;
+			.navContainer{
+				text-align: center;
+			}
+			ul.menu {
+				flex-direction: column;		
+			}
+			div.navContainer {
+				i {
+					display: block;
+				}
+			}
+		}
+	}
+	
+	.about {
+		padding: 40px 5px;
+		.aboutHeader {
+			top: -45px;
+		}
+		.container {
+			.aboutMeContainer {
+				flex-flow: column wrap;
+				.aboutImageContainer {
+					padding-right: 0;
+					max-width: 70%
+				}
+				.aboutTextContainer {
+					text-align: center;
+					max-width: 95%;
+					padding-left: 0;
+				}
+			}
+			.aboutSkills {
+				.aboutSkillsContainer {
+					flex-flow: column wrap;
+					.aboutSkillsText {
+						text-align: center;
+						width: 95%;
+						padding: 0;
+					}
+					.skillsIconList {
+						padding: 0;
+						width: 95%;
+					}
+				}
+				.aboutWorkflowContainer {
+					flex-flow: column wrap;
+					.aboutWorkflowText {
+						text-align: center;
+						width: 95%;
+						padding: 0;
+					}
+					.workflowIconList {
+						padding: 0;
+						width: 95%;
+					}
+				}
+			}
+		}
+	}
+	.portfolio {
+		padding: 40px 5px;
+		h1 {
+			top: -40px;
+		}
+		.container {
+			.portfolioContainer {
+				width: 95%;
+				padding: 0;
+				.portfolioTextContainer {
+					width: 100%;
+					order: 2
+				}
+				.portfolioImageContainer {
+					width: 100%;
+					height: 300px;
+					order: 1;
+				}
+			}
+		}
+	}
+	.contact {
+		background: white;
+		padding: 40px 5px;
+		h1 {
+			top: -40px;
+		}
+		.container {
+			.contactMeContainer {
+				flex-flow: column wrap;
+			}
+			.contactFormContainer {
+				margin: 10px;
+			}
 		}
 	}
 }
 
-footer {
-	text-align: center;
+@media (max-width: 480px) {
+	h1 {
+		font-size: 28px;
+		font-size: 2.8rem;
+	}
+	h2 {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+	h3 {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+	p {
+		font-size: 12px;
+		font-size: 1.2rem;
+	}
+	nav {
+		.navContainer{
+			text-align: center;
+		}
+		ul.menu {
+			flex-direction: row;		
+		}
+		div.navContainer {
+			i {
+				display: none;
+			}
+		}
+	}
 
+	.about {
+		padding: 60px 5px;
+		.aboutHeader {
+			top: -45px;
+		}
+		.container {
+			.aboutMeContainer{
+				.aboutTextContainer{
+					width: 80%;
+					max-width: 700px;
+				}
+			}
+		}
+	}
+
+	.portfolio {
+		padding: 60px 5px;
+		h1 {
+			top: -45px;
+		}
+		.container {
+			.portfolioContainer {
+				width: 80%;
+				padding: 0px;
+				.portfolioTextContainer {
+					width: 100%;
+					order: 2
+				}
+				.portfolioImageContainer {
+					width: 100%;
+					height: 250px;
+					order: 1;
+				}
+			}
+		}
+	}
+	.contact {
+		h1 {
+			top: -45px;
+		}
+	}
 }
+
+
+@media (max-width: 700px) {
+	nav {
+		.navContainer{
+			text-align: center;
+		}
+		ul.menu {
+			flex-direction: row;
+		}
+		div.navContainer {
+			i {
+				display: none;
+			}
+		}
+	}
+	.about {
+		padding: 40px 5px;
+		.aboutHeader {
+		}
+		.container {
+			.aboutMeContainer {
+				flex-flow: column wrap;
+				.aboutImageContainer {
+					padding-right: 0;
+					max-width: 70%
+				}
+				.aboutTextContainer {
+					text-align: center;
+					max-width: 95%;
+					padding-left: 0;
+				}
+			}
+			.aboutSkills {
+				.aboutSkillsContainer {
+					flex-flow: column wrap;
+					.aboutSkillsText {
+						text-align: center;
+						width: 95%;
+						padding: 0;
+					}
+					.skillsIconList {
+						padding: 0;
+						width: 95%;
+					}
+				}
+				.aboutWorkflowContainer {
+					flex-flow: column wrap;
+					.aboutWorkflowText {
+						text-align: center;
+						width: 95%;
+						padding: 0;
+					}
+					.workflowIconList {
+						padding: 0;
+						width: 95%;
+					}
+				}
+			}
+		}
+	}
+
+	.portfolio {
+		padding: 40px 5px;
+		h1 {
+			top: -40px;
+		}
+		.container {
+			.portfolioContainer {
+				width: 80%;
+				.portfolioTextContainer {
+					width: 100%;
+					order: 2
+				}
+				.portfolioImageContainer {
+					width: 100%;
+					height: 250px;
+					order: 1;
+				}
+			}
+		}
+	}
+	.contact {
+		background: white;
+		padding: 40px 5px;
+		h1 {
+			top: -40px;
+		}
+		.container {
+			.contactMeContainer {
+				flex-flow: column wrap;
+			}
+			.contactFormContainer {
+				margin: 10px;
+			}
+		}
+	}
+}
+
 
 	
 

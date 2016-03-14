@@ -49,6 +49,7 @@ h2 {
 h3 {
 	font-size: 18px;
 	font-size: 1.8rem;
+	letter-spacing: 1px;
 }
 h4 {
 	font-size: 16px;
@@ -95,6 +96,7 @@ li {
 i {
 	font-size: 24px;
 	font-size: 2.4rem;
+	transition: 1s;
 }
 i.fa {
 	font-size: 18px;
@@ -135,7 +137,17 @@ form {
 		resize: none;
 		padding: 10px 5px;
 		height: 150px;
-		color: $dark;
+		color: black;
+		font-weight: 700;
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+		&::-webkit-scrollbar-track {
+			color: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $medium;
+		}
 	}
 	input[type=submit] {
 		margin: 0 auto;
@@ -149,6 +161,7 @@ form {
 		position: relative;
 		left: 50%;
 		transform: translate(-50%);
+		transition: 1s;
 		&:hover {
 			background-color: black;
 			color: $light;

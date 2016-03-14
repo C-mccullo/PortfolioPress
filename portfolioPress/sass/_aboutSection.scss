@@ -3,7 +3,7 @@
 // ********************************************
 .about {
 	border-top: 1px solid $medium;
-	padding: 80px;
+	padding: 80px 5px;
 	position: relative;
 		.aboutHeader {
 			top: -70px;
@@ -47,21 +47,24 @@
 			}
 			.aboutImageContainer {
 				overflow: hidden;
-				max-width: 50%;
+				width: 50%;
 				padding-right: 30px;
+				max-width: 320px;
 				img {
 					width: 100%;
 					filter: grayscale(95%);
+					transition: 1s;
 				}
 			}
 		}
 		.aboutSkills {
-			width: 700px;
+			max-width: 700px;
 			i {
 				font-size: 45px;
 			}
 
 			.aboutSkillsContainer {
+				padding-top: 40px;
 				display: flex;
 				flex-flow: row wrap;
 				align-items: flex-end;
@@ -77,6 +80,7 @@
 					flex-flow: row wrap;
 					justify-content: space-between;
 					align-items: center;
+					text-align: center;
 					.aboutSkills {
 						flex-grow: 1;
 						display: block;

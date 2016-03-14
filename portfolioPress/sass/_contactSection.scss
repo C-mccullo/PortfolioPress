@@ -10,14 +10,14 @@
 	background-position: 0% 120%;
 	filter: grayscale(95%);
 	background-color: $light;
-	padding: 80px 0px 0px 0px;
+	padding: 80px 5px 0px 5px;
 	.container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		.contactFormContainer {
-			width: 540px;
+			max-width: 540px;
 			margin: 40px;
 		}
 	}
@@ -30,8 +30,13 @@
 	text-align: center;
 	.contactMeItem {
 		flex-grow: 1;
-		h4, i {
+		h4 {
 			margin: 0;
+		}
+		i {
+			font-size: 32px;
+			font-size: 3.2rem;
+			padding: 10px;
 		}
 	}
 }

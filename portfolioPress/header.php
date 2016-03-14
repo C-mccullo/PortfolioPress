@@ -23,6 +23,16 @@
 
 <body <?php body_class(); ?>>
 
+<nav class="mobileNav">
+    <i class="fa fa-bars"></i>
+</nav>
+<div class="mobileContainer">
+  <?php wp_nav_menu( array(
+      'container' => false,
+      'theme_location' => 'primary'
+  )); ?>
+</div>
+
 <header>
   <nav>
     <div class="navContainer">  

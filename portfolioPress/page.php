@@ -1,7 +1,7 @@
 <?php get_header();  ?>
 
 <div class="main">
-  <section id="about" class="about slant"> 
+  <section id="about" class="about"> 
     <h1 class= "aboutHeader">About Me</h1>
     
         
@@ -9,7 +9,7 @@
       <div class="aboutMeContainer">
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
           <div class="aboutImageContainer">
-            <img src="<?php the_field('about_image') ?>" alt="">
+            <img class ="colorChange" src="<?php the_field('about_image') ?>" alt="">
           </div>
           <div data-wow-duration="2s" class="wow fadeIn aboutTextContainer">
             <h3>Hey! I'm Colin</h3>
@@ -61,7 +61,7 @@
     
   </section>
  
-  <section id="portfolio" class="portfolio slant">
+  <section id="portfolio" class="portfolio">
 
     <h1>My Work</h1>
     
@@ -75,7 +75,7 @@
         <?php $portfolioQuery->the_post(); ?>
       
               <div class="portfolioContainer">
-                <div class="portfolioTextContainer">
+                <div class="portfolioTextContainer colorChange">
                 <h3><?php the_title(); ?></h3>
                   <?php the_content(); ?>
                   <ul class="skillsContainer">
@@ -84,8 +84,9 @@
                      
                     <?php endwhile; ?> 
                   </ul>
+                  <div class="submitButton"></div>
                 </div> 
-                <div class="portfolioImageContainer" style="background-image: url(<?php echo portfolioPress_get_thumbnail_url($post); ?>)"> 
+                <div class="portfolioImageContainer colorChange" style="background-image: url(<?php echo portfolioPress_get_thumbnail_url($post); ?>)"> 
                 </div>
               </div>
           <?php endwhile; ?>
@@ -94,7 +95,7 @@
     </div>
    
   </section>
-  <section id="contact" class= "contact slant">
+  <section id="contact" class= "contact">
     <!-- contact me custom field -->
     <h1>Contact</h1>
 
