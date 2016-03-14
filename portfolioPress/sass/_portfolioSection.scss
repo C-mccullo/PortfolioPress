@@ -1,0 +1,37 @@
+// *********************************************
+//               Portfolio Section
+// *********************************************
+
+.portfolio {
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		.portfolioContainer {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: stretch;
+			justify-content: space-between;
+			border: 1px solid $medium;
+			position: relative;
+			width: 700px;
+			margin: 50px 0;
+			.portfolioTextContainer {
+				padding: 15px 30px 30px 30px;
+				width: 45%;
+				text-align: center;
+			}
+			.portfolioImageContainer {
+				width: 50%;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 45% 45%;
+				filter: grayscale(90%);
+			}
+		}
+	}	
+}
+

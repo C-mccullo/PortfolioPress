@@ -1,0 +1,42 @@
+// ***********************************
+//             Contact Section
+// ***********************************
+
+.contact {
+	background: url("images/San Fransisco Surf Daniel Ruswick test 1.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: 80%;
+	background-position: 0% 120%;
+	filter: grayscale(95%);
+	background-color: $light;
+	padding: 80px 0px 0px 0px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.contactFormContainer {
+			width: 540px;
+			margin: 40px;
+		}
+	}
+}
+.contactMeContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 700px;
+	text-align: center;
+	.contactMeItem {
+		flex-grow: 1;
+		h4, i {
+			margin: 0;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+
+}

@@ -1,0 +1,173 @@
+/*
+* Theme Name: PortfolioPress
+* Version: 1.0
+* Author: Colin McCullough
+* Author URI: http://colinmccullo.ca
+
+====================================
+Default Styling
+====================================
+*/
+
+// Font Variables
+$Catamaran: 'Catamaran', sans-serif; 
+$martel: 'Martel', serif;
+$Raleway: 'Raleway', sans-serif;
+
+// Color Variables 
+$dark: #3E3E3E;
+$medium: #818181;
+$medLight: #f2f2f2;
+$light: #FFFFFF;
+/*
+***********************************
+           SASS Partials
+***********************************
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'global';
+@import 'aboutSection';
+@import 'portfolioSection';
+@import 'contactSection';
+
+
+header {
+	margin: 0 auto;
+	background: url("images/mountain-Photo-test1.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: cover;
+	background-position: 0% 45%;
+	height: 500px;
+	filter: grayscale(90%);
+	.headerContainer {
+		padding-top: 80px;
+		text-align: center;
+	}
+}
+
+// .parallax {
+//   perspective: 2px;
+//   height: 500px;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// }
+// .parallax__layer {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+// }
+// .parallax__layer--base {
+//   transform: translateZ(0);
+//   background-image: url('images/mountain-clouds.png');
+//   background-size: cover;
+//   background-position: 0% -45%;
+// }
+// .parallax__layer--back {
+//   transform: translateZ(-3px) scale(3);
+// }
+
+.portfolio, .contact {
+	border-top: 1px solid $medium;
+	background-color: $light;
+	padding:80px;
+	position: relative;
+	h1 {
+		padding: 0 10px;
+		position: absolute;
+    text-align: center;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: $light;
+    &::after {
+			position: absolute;
+	    content: "";
+	    height: 10px;
+	    z-index: -1;
+	    width: 100%;
+	    top: 43%;
+	    left: 50%;
+	    background-color: #FFF;
+	    box-shadow: 0px 1px 35px 21px white;
+	    border-radius: 43%;
+	    transform: translate(-50%);
+	  }
+	}
+}
+// ********************************************
+//                   Menu
+// ********************************************
+nav {
+	padding-top: 40px;
+	z-index: 90;
+	.menu {
+		margin: 0 auto;
+		width: 380px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+// ***********************************
+//             Contact Section
+// ***********************************
+
+.contact {
+	background: url("images/San Fransisco Surf Daniel Ruswick test 1.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: 80%;
+	background-position: 0% 120%;
+	filter: grayscale(95%);
+	background-color: $light;
+	padding: 80px 0px 0px 0px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.contactFormContainer {
+			width: 540px;
+			margin: 40px;
+		}
+	}
+}
+.contactMeContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 700px;
+	text-align: center;
+	.contactMeItem {
+		flex-grow: 1;
+		h4, i {
+			margin: 0;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+

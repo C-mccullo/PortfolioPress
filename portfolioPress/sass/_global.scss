@@ -1,0 +1,158 @@
+// Global Styles
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: $medium;
+}
+section {
+	background-color: $light;
+}
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
+/*
+====================================
+Default Styling
+====================================
+*/
+
+// Font Variables
+$Catamaran: 'Catamaran', sans-serif; 
+$martel: 'Martel', serif;
+$Raleway: 'Raleway', sans-serif;
+
+// Color Variables 
+$dark: #3E3E3E;
+$medium: #818181;
+$medLight: #f2f2f2;
+$light: #FFFFFF;
+
+h1, h2, h3, h4, h5 {
+	font-family: $Catamaran;
+	color: $dark;
+}
+h1 {
+	font-size: 42px;
+	font-size: 4.2rem;
+	font-weight: 200;
+}
+h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+h4 {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+h5 {
+	font-size: 14px;
+	font-size: 1.4rem;
+	color: $medium;
+}
+p {
+	font-size: 14px;
+	font-size: 1.4rem;
+	color: $dark;
+	font-family: $martel;
+}
+
+a {
+	color: #818181;
+	text-decoration: none;
+	&:hover {
+		color: #3E3E3E;
+	}
+}
+img {
+	max-width: 100%;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	display: inline-block;
+	text-decoration: none;
+	padding: 20;
+	a {
+		font-size: 18px;
+		font-size: 1.8rem;
+		font-family: $martel;
+	}
+}
+
+i {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+i.fa {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+form {
+	max-width: 460px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	p {
+		font-size: 16px;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+	}
+	input {
+		width: 100%;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid $medium;
+		background-color: transparent;
+		background-image: none;
+		background-attachment: none;
+		padding: 5px;
+		color: black;
+	}
+	input[type=text], input[type=email] {
+		font-weight: 700;
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+	textarea {
+		width: 100%;
+		background-color: transparent;
+		outline: none;
+		border: 1px solid $medium;
+		resize: none;
+		padding: 10px 5px;
+		height: 150px;
+		color: $dark;
+	}
+	input[type=submit] {
+		margin: 0 auto;
+		text-align: center;
+		width: 60%;
+		background-color: $medium;
+		transition: 0.5s;
+		border: 1px solid $medium;
+		color: $light;
+		letter-spacing: 1px;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		&:hover {
+			background-color: black;
+			color: $light;
+			border: 1px solid black;
+		}
+	}
+}
