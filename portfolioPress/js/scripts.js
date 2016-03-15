@@ -39,23 +39,25 @@ $(document).ready(function() {
         var element_bottom_position = (element_top_position + element_height);
      
         //check to see if this current container is within viewport
-        if ( element_top_position <= ($window.scrollTop() + 60) ) {
+        if ( element_top_position <= ($window.scrollTop() + 40) ) {
           $element.css('filter', 'grayscale(90%)');
           $element.css('-webkit-filter', 'grayscale(90%)');
           $element.css('color', '#818181');
+          $element.find('.viewButton').css('background-color', '#818181');
         }
         else if ((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
           $element.css('filter', 'grayscale(20%)');
           $element.css('-webkit-filter', 'grayscale(20%)');
           $element.css('color', 'black')
+          $element.find('.viewButton').css('background-color', 'black');
           
         } else {
           
           $element.css('-webkit-filter', 'grayscale(90%)');
           $element.css('filter', 'grayscale(90%)');
           $element.css('color', "#818181" );
-
+          $element.find('.viewButton').css('background-color', '#818181');
         }
       });
     };

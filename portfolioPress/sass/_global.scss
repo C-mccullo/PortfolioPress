@@ -5,7 +5,7 @@ html {
 }
 
 body {
-	color: $medium;
+	// color: $medium;
 }
 section {
 	background-color: $light;
@@ -61,6 +61,8 @@ h5 {
 	color: $medium;
 }
 p {
+	line-height: 30px;
+	line-height: 3.0rem;
 	font-size: 14px;
 	font-size: 1.4rem;
 	color: $dark;
@@ -111,7 +113,8 @@ form {
 	p {
 		font-size: 16px;
 		font-size: 1.6rem;
-		line-height: 2.4rem;
+		line-height: 30px;
+		line-height: 3.0rem;
 	}
 	input {
 		width: 100%;
@@ -168,4 +171,8 @@ form {
 			border: 1px solid black;
 		}
 	}
+}
+.colorChange {
+	filter: grayscale(90%);
+	color: $medium;
 }

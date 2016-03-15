@@ -23,10 +23,17 @@
 
 <body <?php body_class(); ?>>
 
-<nav class="mobileNav">
+<nav class="mobileNav clearfix wrapper">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 640 258.2" style="enable-background:new 0 0 640 258.2;" xml:space="preserve">
+<path d="M177,252.5l8.8-8.8c-25-25.1-49.9-67.6-26.9-127l19.8-20.2L260,180l-71.9,72.5l269.9,0.7c0,0-48.1-22-70.8-50.5
+  c-27-33.9-32.8-72.2-16.9-114.2l43.8-43.5L615.7,252l17.9,0L414.3,26.7l-42.5,42.2L313.6,9.1l-102.7,102l-31.9-32.8L5.2,252
+  L177,252.5z M362.8,78l-56.6,56.3c-16.1-28.4-18.3-59.6-6.8-92.9l14.1-14L362.8,78z"/>
+</svg>
     <i class="fa fa-bars"></i>
 </nav>
-<div class="mobileContainer">
+<div class="mobileContainer wrapper">
+
   <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'
@@ -35,7 +42,8 @@
 
 <header>
   <nav>
-    <div class="navContainer">  
+    <div class="navContainer">
+      <a href="#"> <svg viewBox="0 0 640 258.2"><path d="M177 252.5l8.8-8.8c-25-25.1-49.9-67.6-26.9-127l19.8-20.2L260 180l-71.9 72.5 269.9.7s-48.1-22-70.8-50.5c-27-33.9-32.8-72.2-16.9-114.2L414.1 45l201.6 207h17.9L414.3 26.7l-42.5 42.2-58.2-59.8-102.7 102L179 78.3 5.2 252l171.8.5zM362.8 78l-56.6 56.3c-16.1-28.4-18.3-59.6-6.8-92.9l14.1-14L362.8 78z"/></svg> </a> 
       <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'primary'

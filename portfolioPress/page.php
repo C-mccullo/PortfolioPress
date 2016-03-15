@@ -84,7 +84,9 @@
                      
                     <?php endwhile; ?> 
                   </ul>
-                  <div class="submitButton"></div>
+                  <a href=""><div class="viewButton">
+                    <p>View Site</p>
+                  </div></a>
                 </div> 
                 <div class="portfolioImageContainer colorChange" style="background-image: url(<?php echo portfolioPress_get_thumbnail_url($post); ?>)"> 
                 </div>

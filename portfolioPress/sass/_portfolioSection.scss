@@ -15,16 +15,43 @@
 			flex-flow: row wrap;
 			align-items: stretch;
 			justify-content: space-between;
-			border: 1px solid $medium;
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 			position: relative;
 			max-width: 700px;
 			margin: 50px 0;
 			padding: 20px;
 			flex-grow: 1;
 			.portfolioTextContainer {
-				padding: 15px 30px 30px 30px;
+				padding: 0px 30px;
 				width: 45%;
-				text-align: center;
+				text-align: left;
+				h3 {
+					margin: 0;
+				}
+				a {
+					.viewButton {
+						text-align: center;
+				    width: 80%;
+				    background-color: #818181;
+				    color: #FFF;
+				    letter-spacing: 1px;
+				    -webkit-transition: 1s;
+				    transition: 1s;
+				    margin-top: 20px;
+				    cursor:pointer;
+				    transition: 1s;
+				    p {
+				    	margin: 0;
+				    	color: $light;
+				    }
+					}
+				}
+				.skillsContainer {
+					width: 100%;
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+				}
 			}
 			.portfolioImageContainer {
 				width: 50%;
