@@ -67,7 +67,7 @@
     
     <div class="container wrapper">
        <?php $portfolioQuery = new WP_Query (array(
-        'posts_per_page' => 3, 
+        'posts_per_page' => 4, 
         'post_type' => 'portfolio'
       )); ?>
       <?php if($portfolioQuery-> have_posts()):  ?>
@@ -84,7 +84,7 @@
                      
                     <?php endwhile; ?> 
                   </ul>
-                  <a href=""><div class="viewButton">
+                  <a href=" <?php the_field('project_url') ?>"><div class="viewButton">
                     <p>View Site</p>
                   </div></a>
                 </div> 
